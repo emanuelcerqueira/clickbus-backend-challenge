@@ -1,4 +1,4 @@
-package io.github.emanuelcerqueira.clickbusbackendchallenge.core.domain;
+package io.github.emanuelcerqueira.clickbusbackendchallenge.sharedKernel;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -15,8 +15,6 @@ public abstract class BaseEntity {
     @Id
     @Column(name = "id", length = 16, unique = true, updatable = false, nullable = false)
     private UUID id = UUID.randomUUID();
-    @Embedded
-    private Audit audit = new Audit();
 
     @Version
     private Long version;

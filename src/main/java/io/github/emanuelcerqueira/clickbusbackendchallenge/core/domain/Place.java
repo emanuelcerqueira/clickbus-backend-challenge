@@ -1,17 +1,22 @@
 package io.github.emanuelcerqueira.clickbusbackendchallenge.core.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import io.github.emanuelcerqueira.clickbusbackendchallenge.sharedKernel.Audit;
+import io.github.emanuelcerqueira.clickbusbackendchallenge.sharedKernel.BaseEntity;
+
+import javax.persistence.*;
 
 @Entity
 public class Place extends BaseEntity {
 
     private String name;
+    @Column(unique = true)
     private String slug;
     private String city;
     @Enumerated(EnumType.STRING)
     private State state;
+
+    @Embedded
+    private Audit audit = new Audit();
 
     @Deprecated
     public Place() {
@@ -55,4 +60,5 @@ public class Place extends BaseEntity {
     public void setState(State state) {
         this.state = state;
     }
+
 }

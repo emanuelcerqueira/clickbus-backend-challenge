@@ -1,7 +1,7 @@
 package io.github.emanuelcerqueira.clickbusbackendchallenge.core.services;
 
 import io.github.emanuelcerqueira.clickbusbackendchallenge.core.domain.Place;
-import io.github.emanuelcerqueira.clickbusbackendchallenge.core.exception.ObjectNotFoundException;
+import io.github.emanuelcerqueira.clickbusbackendchallenge.core.services.exception.ObjectNotFoundException;
 import io.github.emanuelcerqueira.clickbusbackendchallenge.core.repository.PlaceRepository;
 import io.github.emanuelcerqueira.clickbusbackendchallenge.core.repository.specification.PlaceSpecification;
 import org.springframework.data.domain.Page;
