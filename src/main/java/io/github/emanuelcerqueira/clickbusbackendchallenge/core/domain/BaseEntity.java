@@ -2,15 +2,13 @@ package io.github.emanuelcerqueira.clickbusbackendchallenge.core.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.persistence.Column;
-import javax.persistence.Embedded;
-import javax.persistence.Id;
-import javax.persistence.Version;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
 import java.util.UUID;
 
-public class BaseEntity {
+@MappedSuperclass
+public abstract class BaseEntity {
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @NotNull

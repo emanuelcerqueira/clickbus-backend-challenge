@@ -1,8 +1,10 @@
 package io.github.emanuelcerqueira.clickbusbackendchallenge.core.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
+@Entity
 public class Place extends BaseEntity {
 
     private String name;
