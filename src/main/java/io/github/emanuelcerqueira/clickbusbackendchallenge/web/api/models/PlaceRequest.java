@@ -19,7 +19,7 @@ public class PlaceRequest {
     @Length(min=3, max=50, message="The city length must be between 5 and 50 characters.")
     private String city;
     @NotEmpty(message = "Must not be empty.")
-    @Pattern(regexp = "(AC|AL|AM|AP|BA|CE|DF|ES|GO|MA|MG|MS|MT|PA|PB|PE|PI|PR|RJ|RN|RO|RR|RS|SC|SE|SP|TO)")
+    @Pattern(regexp = "(AC|AL|AM|AP|BA|CE|DF|ES|GO|MA|MG|MS|MT|PA|PB|PE|PI|PR|RJ|RN|RO|RR|RS|SC|SE|SP|TO)", message = "Invalid state.")
     private String state;
 
     public PlaceRequest() {
