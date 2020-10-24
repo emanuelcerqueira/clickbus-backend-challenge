@@ -21,7 +21,8 @@ public class PlaceSpecification implements Specification<Place> {
         List<Predicate> predicates = new ArrayList<>();
         if (StringUtils.hasText(name)) {
             Path<String> nameField = root.get("name");
-            Predicate predicateName = builder.like(nameField, "%"+name+"%");
+            Expression<String> nameFieldUpper = builder.upper(nameField);
+            Predicate predicateName = builder.like(nameFieldUpper, "%"+name.toUpperCase()+"%");
             predicates.add(predicateName);
         }
         return builder.and(predicates.toArray(new Predicate[0]));
