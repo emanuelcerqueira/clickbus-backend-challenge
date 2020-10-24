@@ -9,7 +9,7 @@ git clone https://github.com/emanuelcerqueira/clickbus-backend-challenge.git
 
 #### 2. Build the project
 ``
-./mvnw package && java -jar target/clickbus-backend-challenge-0.1.0.jar
+./mvnw package
 ``
 
 #### 3. Build image
